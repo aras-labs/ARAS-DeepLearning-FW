@@ -1,0 +1,6 @@
+logs/
+weights/
+**/.idea
+**/__pycache__
+.ignore
+run/

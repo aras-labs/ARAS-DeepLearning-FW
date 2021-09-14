@@ -1,0 +1,11 @@
+SYSTEM:
+  NUM_GPUS: 2
+  NUM_WORKERS: 4
+  DEVISE: 'cuda'
+  CUDA_VISIBLE_DEVICES: "'0'"
+  MAX_BATCH_SIZE: 10
+DATASET:
+  PATH: '../'
+LOGGING:
+  BEST: true
+  COMMENT: 'just flip augment'

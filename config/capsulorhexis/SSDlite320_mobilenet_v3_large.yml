@@ -1,0 +1,23 @@
+TRAIN:
+  INPUT_SIZE: None
+  BATCH_SIZE: 4
+  EPOCHS: 20
+  STEP: 'SSDlite320_mobilenet_v3_large'
+  PARAM:
+    OPTIMIZER: 'SGD'
+    OPTIMIZER_PARAM:
+      lr: 0.005
+      momentum: 0.9
+      weight_decay: 0.0005
+
+MODEL:
+  NAME: 'ssdlite320_mobilenet_v3_large'
+  PARAM:
+    pretrained: false
+    progress: false,
+    num_classes: 3,
+    pretrained_backbone: true,
+    trainable_backbone_layers: null
+
+DATASET:
+  NAME: 'AFCID'

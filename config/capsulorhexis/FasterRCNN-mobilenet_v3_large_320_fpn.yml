@@ -1,0 +1,24 @@
+TRAIN:
+  INPUT_SIZE: None
+  BATCH_SIZE: 4
+  EPOCHS: 20
+  STEP: 'FasterRCNN-mobilenet_v3_large_320_fpn'
+  PARAM:
+    OPTIMIZER: 'SGD'
+    OPTIMIZER_PARAM:
+      lr: 0.005
+      momentum: 0.9
+      weight_decay: 0.0005
+
+MODEL:
+  NAME: 'fasterrcnn_mobilenet_v3_large_320_fpn'
+  PARAM:
+    pretrained: false
+    progress: false,
+    num_classes: 3,
+    pretrained_backbone: true,
+    trainable_backbone_layers: null
+  # resnet50_fpn, mobilenet_v3_large_fpn, mobilenet_v3_large_320_fpn,
+
+DATASET:
+  NAME: 'AFCID'
