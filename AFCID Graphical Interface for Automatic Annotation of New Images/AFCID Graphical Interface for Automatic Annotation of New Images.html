@@ -1,0 +1,111 @@
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body>
+	<form id="inputForm">
+		<div class="header">
+			<div class="header__grid">
+				<img class="header__logo" src="https://i.ibb.co/pLKjHYV/aras-logo-wo-bg.png" alt="AFCID Inference">
+				<div>
+					<label class="header__label" for="model">Model</label>
+					<input class="input" type="text" id="model" />
+				</div>
+				<div>
+					<label class="header__label" for="version">Version</label>
+					<input class="input" type="number" id="version" />
+				</div>
+				<div>
+					<label class="header__label" for="api_key">API Key</label>
+					<input class="input" type="text" id="api_key" />
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="content__grid">
+				<div class="col-12-s6-m4" id="method">
+					<label class="input__label">Upload Method</label>
+					<div>
+						<button data-value="upload" id="computerButton" class="bttn left fill active">Upload</button>
+						<button data-value="url" id="urlButton" class="bttn right fill">URL</button>
+					</div>
+				</div>
+
+				<div class="col-12-m8" id="fileSelectionContainer">
+					<label class="input__label" for="file">Select File</label>
+					<div class="flex">
+						<input class="input input--left flex-1" type="text" id="fileName" disabled />
+						<button id="fileMock" class="bttn right active">Browse</button>
+					</div>
+					<input style="display: none;" type="file" id="file" />
+				</div>
+
+				<div class="col-12-m8" id="urlContainer">
+					<label class="input__label" for="file">Enter Image URL</label>
+					<div class="flex">
+						<input type="text" id="url" placeholder="https://path.to/your.jpg" class="input"/><br>
+					</div>
+				</div>
+
+				<div class="col-12-m6">
+					<label class="input__label" for="classes">Filter Classes</label>
+					<input type="text" id="classes" placeholder="Enter class names" class="input"/><br>
+					<span class="text--small">Separate names with commas</span>
+				</div>
+
+				<div class="col-6-m3 relative">
+					<label class="input__label" for="confidence">Min Confidence</label>
+					<div>
+						<i class="fas fa-crown"></i>
+						<span class="icon">%</span>
+						<input type="number" id="confidence" value="40" max="100" accuracy="2" min="0" class="input input__icon"/></div>
+					</div>
+				<div class="col-6-m3 relative">
+					<label class="input__label" for="overlap">Max Overlap</label>
+					<div>
+						<i class="fas fa-object-ungroup"></i>
+						<span class="icon">%</span>
+						<input type="number" id="overlap" value="30" max="100" accuracy="2" min="0" class="input input__icon"/></div>
+				</div>
+				<div class="col-6-m3" id="format">
+					<label class="input__label">Inference Result</label>
+					<div>
+						<button id="imageButton" data-value="image" class="bttn left fill active">Image</button>
+						<button id="jsonButton" data-value="json" class="bttn right fill">JSON</button>
+					</div>
+				</div>
+				<div class="col-12 content__grid" id="imageOptions">
+					<div class="col-12-s6-m4" id="labels">
+						<label class="input__label">Labels</label>
+						<div>
+							<button class="bttn left">Off</button>
+							<button data-value="on" class="bttn right active">On</button>
+						</div>
+					</div>
+					<div class="col-12-s6-m4" id="stroke">
+						<label class="input__label">Stroke Width</label>
+						<div>
+							<button data-value="1" class="bttn left">1px</button>
+							<button data-value="2" class="bttn active">2px</button>
+							<button data-value="5" class="bttn">5px</button>
+							<button data-value="10" class="bttn right">10px</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<button type="submit" value="Run Inference" class="bttn__primary">Run Inference</button>
+				</div>
+			</div>
+			<div class="result" id="resultContainer">
+				<div class="divider"></div>
+				<div class="result__header">
+					<h3 class="headline">Result</h3>
+					<a href="#">Copy Code</a>
+				</div>
+				<pre id="output" class="codeblock"/> here is your json </pre>
+			</div>
+		</div>
+	</form>
+</body>
