@@ -6,7 +6,8 @@ Download AFCID Dataset and .pt Files:
 Contant arasfarabi.dataset@gmail.com
 
 Real-time performance in detecting and tracking the capsulorhexis cystotome and pupil using the AFCID dataset:
-[[Watch the video]](https://youtu.be/L6AiMw0MMPo)
+
+[![](https://img.youtube.com/vi/L6AiMw0MMPo/0.jpg)](https://www.youtube.com/watch?v=L6AiMw0MMPo)
 
 # Citation
 @INPROCEEDINGS{AFCID2021,
