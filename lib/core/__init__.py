@@ -1,4 +1,3 @@
-from .nan import *
 from torchvision.models.detection import *
 from torchvision.models.detection._utils import overwrite_eps
 from torchvision.models.utils import load_state_dict_from_url
